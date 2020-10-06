@@ -39,10 +39,20 @@ class TicTacToe
 
   def valid_move?(index)
     if index.to_i.between?(0, 8) && !position_taken?(index)
-    true
-  else
-    false
+      true
+    else
+      false
+    end
   end
-end
+
+  def turn_count
+    turn = 0
+    @board.each do |board_move|
+      if board_move == "X" || board_move == "O"
+        turn +=1
+      end
+    end
+    return turn
+  end
 
 end
