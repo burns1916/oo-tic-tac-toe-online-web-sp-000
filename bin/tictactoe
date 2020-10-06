@@ -3,6 +3,7 @@ require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
 TicTacToe.new
+@board.play
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
-@board.play
+
