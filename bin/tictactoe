@@ -2,8 +2,9 @@
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
+initialize
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
-initialize
+
 display_board
 play
