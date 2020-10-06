@@ -97,4 +97,49 @@ def won?
     return false
   end
 
+  def full?
+  @board.none?{|i| i == " "}
+end
+
+def draw?
+  if !won? && full?
+    return true
+  else
+    return false
+  end
+end
+
+def over?
+  if full? || won? || draw?
+    return true
+  else
+    return false
+  end
+end
+
+def winner
+  winner = []
+  winner = won?
+  if winner == false
+    return nil
+  else
+    if @board[winner[0]] == "X"
+      return "X"
+    else
+      return "O"
+    end
+  end
+    end
+
+    def play
+    until over? == true
+      turn
+    end
+    if won?
+      puts "Congratulations #{winner(board)}!"
+    elsif draw?
+      puts "Cat's Game!"
+    end
+  end
+
 end
