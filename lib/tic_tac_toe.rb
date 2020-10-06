@@ -55,4 +55,14 @@ class TicTacToe
     return turn
   end
 
+  def current_player
+    turn_count
+    if turn_count.even?
+     player = "X"
+    elsif turn_count.odd?
+      player = "O"
+  end
+  return player
+  end
+
 end
